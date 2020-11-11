@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  interviewer_name: MyString
+  interviewer_email: MyString
+  interviewee_name: MyString
+  interviewee_email: MyString
+  interview_date: 2020-11-11
+  interview_starttime: 2020-11-11 15:41:21
+  interview_endtime: 2020-11-11 15:41:21
+
+two:
+  interviewer_name: MyString
+  interviewer_email: MyString
+  interviewee_name: MyString
+  interviewee_email: MyString
+  interview_date: 2020-11-11
+  interview_starttime: 2020-11-11 15:41:21
+  interview_endtime: 2020-11-11 15:41:21
