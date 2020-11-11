@@ -1,1 +1,40 @@
-<h1>Hi</h1>
+<h1> ALL INTERVIEWS </h1>
+
+<%= link_to 'Create new interview', new_interview_path %>
+
+ <div id = "form">
+  <% @interviews.each do |interview| %>
+        <p>
+            <strong>Interviewer_Name:</strong>
+            <%= interview.interviewer_name %>
+        </p>
+        <p>
+            <strong>Interviewee_Name:</strong>
+            <%= interview.interviewee_name %>
+        </p>
+        <p>
+            <strong>Interviewer_Email:</strong>
+            <%= interview.interviewer_email %>
+        </p>
+        <p>
+            <strong>Interviewee_Email:</strong>
+            <%= interview.interviewee_email %>
+        </p>
+        <p>
+            <strong>Interview_Date:</strong>
+            <%= interview.interview_date %>
+        </p>
+        <p>
+            <strong>Interview_Starts:</strong>
+            <%= interview.interview_starttime %>
+        </p>
+        <p>
+            <strong>Interview_Ends:</strong>
+            <%= interview.interview_endtime %>
+        </p>
+        <%= link_to 'Edit', edit_interview_path(interview) %> | 
+        <%= link_to 'Destroy', interview_path(interview),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  </div>

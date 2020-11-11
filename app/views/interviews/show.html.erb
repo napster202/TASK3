@@ -1,0 +1,31 @@
+<h1> Interview_Details : </h1>
+
+<p>
+  <strong>Interviewer Name:</strong>
+  <%= @interview.interviewer_name %>
+</p>
+<p>
+  <strong>Interviewee Name:</strong>
+  <%= @interview.interviewee_name %>
+</p>
+<p>
+  <strong>Interviewer Email:</strong>
+  <%= @interview.interviewer_email %>
+</p>
+<p>
+  <strong>Interviewee Email:</strong>
+  <%= @interview.interviewee_email %>
+</p>
+<p>
+  <strong>Interview Date:</strong>
+  <%= @interview.interview_date %>
+</p>
+<p>
+  <strong>Interview Start Time :</strong>
+  <%= @interview.interview_starttime %>
+</p>
+<p>
+  <strong>Interview End Time :</strong>
+  <%= @interview.interview_endtime %>
+</p>
+<%= link_to 'All interviews', interviews_path %>

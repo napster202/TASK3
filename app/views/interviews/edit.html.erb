@@ -1,0 +1,37 @@
+<h1>Enter details here </h1>
+
+<%= form_with model: @interview, url: interview_path do |form| %>
+    <p>
+      <%= form.label :Interviewer_Name%><br>
+      <%= form.text_field :interviewer_name %>
+    </p>    
+    <p>
+      <%= form.label :Interviewee_Name%><br>
+      <%= form.text_field :interviewee_name %>
+    </p>
+    <p>
+      <%= form.label :Interviewer_Email%><br>
+      <%= form.text_field :interviewer_email %>
+    </p>
+    <p>
+      <%= form.label :Interviewee_Email%><br>
+      <%= form.text_field :interviewee_email %>
+    </p>
+    <p>
+      <%= form.label :Date%><br>
+      <%= form.date_field :interview_date %>
+    </p>
+    <p>
+      <%= form.label :Start_Time%><br>
+      <%= form.time_field :interview_starttime %>
+    </p>
+    <p>
+      <%= form.label :End_Time%><br>
+      <%= form.time_field :interview_endtime %>
+    </p>
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+    <%= link_to 'Show', @interview %> |
+    <%= link_to 'Back', interviews_path %>
+    <% end %>
