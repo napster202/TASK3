@@ -1,6 +1,18 @@
 <h1>Enter details here </h1>
 
 <%= form_with model: @interview, url: interview_path do |form| %>
+    <% if flash[:errors] %>
+  <div id="error_explanation">
+    <h2><%= pluralize(flash[:errors].count, "error") %> prohibited this article from being saved:</h2>
+
+    <ul>
+      <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+    
     <p>
       <%= form.label :Interviewer_Name%><br>
       <%= form.text_field :interviewer_name %>
@@ -8,6 +20,10 @@
     <p>
       <%= form.label :Interviewee_Name%><br>
       <%= form.text_field :interviewee_name %>
+    </p>
+    <p>
+      <%= form.label :Interviewee_Resume%><br>
+      <%= form.file_field :resume %>
     </p>
     <p>
       <%= form.label :Interviewer_Email%><br>

@@ -7,7 +7,12 @@ class InterviewsController < ApplicationController
     end
     def create
         @interview = Interview.create(interview_params)
-        redirect_to interviews_path
+        if(@interview.errors.count == 0)
+          redirect_to interviews_path
+        else
+          flash[:errors] = @interview.errors.full_messages
+          redirect_to new_interview_path
+        end
       end
     def show
         @interview = Interview.find(params[:id])
@@ -18,6 +23,7 @@ class InterviewsController < ApplicationController
     def update
         @interview = Interview.find(params[:id])
         @interview.update(interview_params)
+        @interview.save!
         redirect_to(interview_path(@interview))
       end
     def destroy
@@ -30,6 +36,7 @@ class InterviewsController < ApplicationController
       def interview_params
         params.require(:interview).permit(:interviewer_name, 
         :interviewee_name, :interviewer_email, :interviewee_email, 
-        :interview_date, :interview_starttime, :interview_endtime)
+        :interview_date, :interview_starttime, :interview_endtime, 
+        :resume)
       end
 end
