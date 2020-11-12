@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201111155630) do
+ActiveRecord::Schema.define(version: 20201112085102) do
 
   create_table "interviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "interviewer_name"
@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20201111155630) do
     t.string "interviewee_name"
     t.string "interviewee_email"
     t.date "interview_date"
-    t.time "interview_starttime"
-    t.time "interview_endtime"
+    t.datetime "interview_starttime"
+    t.datetime "interview_endtime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "resume_file_name"

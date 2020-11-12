@@ -34,16 +34,12 @@
       <%= form.text_field :interviewee_email %>
     </p>
     <p>
-      <%= form.label :Date%><br>
-      <%= form.date_field :interview_date %>
-    </p>
-    <p>
       <%= form.label :Start_Time%><br>
-      <%= form.time_field :interview_starttime %>
+      <%= form.datetime_field :interview_starttime %>
     </p>
     <p>
       <%= form.label :End_Time%><br>
-      <%= form.time_field :interview_endtime %>
+      <%= form.datetime_field :interview_endtime %>
     </p>
     <div class="actions">
         <%= form.submit %>

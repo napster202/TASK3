@@ -23,7 +23,7 @@ class InterviewsController < ApplicationController
     def update
         @interview = Interview.find(params[:id])
         @interview.update(interview_params)
-        @interview.save!
+        # @interview.save!
         redirect_to(interview_path(@interview))
       end
     def destroy
@@ -36,7 +36,7 @@ class InterviewsController < ApplicationController
       def interview_params
         params.require(:interview).permit(:interviewer_name, 
         :interviewee_name, :interviewer_email, :interviewee_email, 
-        :interview_date, :interview_starttime, :interview_endtime, 
+        :interview_starttime, :interview_endtime, 
         :resume)
       end
 end
